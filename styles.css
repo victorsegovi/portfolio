@@ -57,11 +57,11 @@ button{
     border: none;
 }
 
-h4, button, label, h2, p{
+h4, button, label, p{
     color: hsl(208, 100%, 95%);
 }
 
- a, h1{
+ a, h1, h2{
     color: rgb(5, 10, 14);
     text-decoration: none;
 }
@@ -79,7 +79,7 @@ h4, button, label, h2, p{
     position: absolute;
     top: 67px;
     width: 100%;
-    background-color: hsla(0, 0%, 100%, .8);
+    background-color: rgba(255, 255, 255, .95);
     display: none;
 }
 
