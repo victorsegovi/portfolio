@@ -57,11 +57,11 @@ button{
     border: none;
 }
 
-h4, button, label, p{
+h2, h4, button, label, p{
     color: hsl(208, 100%, 95%);
 }
 
- a, h1, h2{
+ a, h1, nav h2{
     color: rgb(5, 10, 14);
     text-decoration: none;
 }
