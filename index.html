@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="mobile">
+            <div class="logo">
+                <h1>Victor Segovia</h1>
+            </div>
+            <div class="bar">
+                <div class="bars">
+                    <button id="button">
+                        <h2>○</h2>
+                    </button>
+                </div>
+            </div>
+            <div id="list">
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="logo">
+                <h1>Victor Segovia</h1>
+            </div>
+            <div class="bar">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="about">
+            <img src="images/victor.jpeg" alt="Victor Segovia">
+                <h2>About</h2>
+                <p>My name is Victor Segovia, I'm 18 years old, I'm from Venezuela and I'm currently a self-taught Front-End
+                    Developer. I am persuing an Associative Degree in Computer Science. I have experience
+                    creating
+                    Web Apps from scratch using HTML5, CSS & JavaScript. If what you're looking for is a
+                    Developer
+                    who can work hard and be creative when making a project, this is the place!</p>
+        </div>
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="projects__container">
+                <a href="https://victorsegovi.github.io/game.2048/" target="_blank">
+                    <img src="images/2048-game.png" alt="Project 1">
+                    <div class="description description__1">
+                        <p>2048-game clone made with pure HTML, CSS and JavaScript.</p>
+                    </div>
+                </a>
+                <a href="https://victorsegovi.github.io/landing-page/" target="_blank">
+                    <img src="images/victorsegovi.github.io_landing-page_.png" alt="Project 2">
+                    <div class="description description__2">
+                        <p>Landing Page made with pure HTML and CSS.</p>
+                    </div>
+                </a>
+                <a href="https://victorsegovi.github.io/nft.card/" target="_blank">
+                    <img src="images/victorsegovi.github.io_nft.card_.png" alt="Project 3">
+                    <div class="description description__3">
+                        <p>NFT card made with pure HTML and CSS.</p>
+                    </div>
+                </a>
+                <a href="https://victorsegovi.github.io/order.summary.component/" target="_blank">
+                    <img src="images/victorsegovi.github.io_order.summary.component_.png" alt="Project 4">
+                    <div class="description description__4">
+                        <p>Order Summary Component made with pure HTML and CSS.</p>
+                    </div>
+                </a>
+                <a href="https://victorsegovi.github.io/card-component/" target="_blank">
+                    <img src="images/victorsegovi.github.io_card-component_.png" alt="Project 5">
+                    <div class="description description__5">
+                        <p>Card Component made with pure HTML and CSS.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="contact">
+            <h2>Contact</h2>
+            <form>
+                <div class="name">
+                    <label for="Name">Name:</label>
+                    <input type="text" placeholder="Example: John Doe" required>
+                </div>
+                <div class="email">
+                    <label for="Email">Email:</label>
+                    <input type="email" placeholder="Example: johndoe@email.com" required>
+                </div>
+                <div class="mesaje">
+                    <label for="Mesaje">Mesaje:</label>
+                    <textarea id="subject" name="mesaje" placeholder="Example: Let's work together"></textarea>
+                </div>
+                <div class="contact__button">
+                    <button id="send">SEND!</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

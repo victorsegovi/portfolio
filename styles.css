@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 10%);
+}
+
+nav{
+    position: fixed;
+    height:67px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .95);
+    z-index: 1000;
+    top: 0
+}
+
+.mobile{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+h1{
+    font-size: 16px;
+}
+
+.bar{
+    width: 60%;
+    height: 100%;
+    display: flex;
+}
+
+.bars{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+button{
+    background-color: unset;
+    border: none;
+}
+
+h4, button, label, h2, p{
+    color: hsl(208, 100%, 95%);
+}
+
+ a, h1{
+    color: rgb(5, 10, 14);
+    text-decoration: none;
+}
+
+.bars button{
+    font-size: 20px;
+}
+
+.bars a{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#list{
+    position: absolute;
+    top: 67px;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, .8);
+    display: none;
+}
+
+li{
+    list-style: none;
+    text-align: center;
+    height: 40px;
+}
+
+li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+}
+
+li a:hover{
+    background-color:  hsl(0, 4%, 5%);
+    color: hsl(208, 100%, 95%);
+}
+
+main{
+    margin-top: 67px;
+    padding: 20px;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    background-image: url(images/background-image-1.jpg);
+}
+
+.about h2, .projects h2, .contact h2{
+    background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+}
+
+.about img{
+    border-radius: 15px;
+    min-width: 280px;
+    min-height: 210px;
+}
+
+.about h2{
+    margin: 10px 0;
+}
+
+.about p{
+    word-spacing: 5px;
+    background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 10px;
+    padding: 10px;
+} 
+
+.projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h2{
+    margin-top: 50px;
+}
+
+.projects__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.projects a{
+    margin: 20px 0;
+    min-width: 280px;
+    display: flex;
+    position: relative;
+}
+
+.projects img{
+    min-width: 280px;
+    border-radius: 15px;
+    z-index: 100;
+}
+
+.projects img:hover{
+    opacity: .02;
+    transition: .5s ease-in-out;
+}
+
+.description{
+    height: 100%;
+    border-radius: 15px;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    background-color:hsla(0, 0%, 100%, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description p{
+    color: hsl(208, 100%, 95%);
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact{
+    margin-top: 30px;
+}
+
+.name, .email, .mesaje{
+    display: flex;
+    margin: 15px 0;
+}
+
+.name label, .email label, .mesaje label{
+    width: 22%;
+    font-weight: 600;
+}
+
+.name input, .email input, .mesaje textarea{
+    width: 78%;
+    border-right: none;
+    background-color: hsla(0, 0%, 100%, 0.0019);
+    color: hsl(208, 100%, 95%);
+}
+
+.mesaje textarea{
+    height: 200px;
+    border-top: none;
+    border-left: none;
+}
+
+.contact button{
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact button:hover{
+    background-color: hsl(0, 0%, 20%);
+    cursor: pointer;
+}
+
+.contact button:active{
+    background-color:hsl(0, 0%, 15%);
+    border: 1px solid #f5f5f5;
+}
+
+.responsive{
+    display: none;
+}
+
+@media screen and (min-width: 450px){
+    .about p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    
+    .projects__container{
+        justify-content: space-around;
+    }
+
+    .projects a{
+        min-width: unset;
+        max-width: unset;
+    }
+
+    .projects img{
+        min-width: unset;
+        max-width: 210px;
+    }
+
+    .description p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    h1{
+        font-size: 20px;
+    }
+
+    .about h2, .projects h2, .contact h2{
+        font-size: 36px;
+    }
+
+    .about p{
+        font-size: 20px;
+    }
+
+    .projects img{
+        max-width: 220px;
+    }
+
+    .description p{
+        font-size: 20px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    .contact button{
+        font-size: 25px;
+        height: 45px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .mobile{
+        display: none;
+    }
+
+    .responsive, ul{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    li{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .about{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+
+    .about img{
+        min-width: unset;
+        min-height: unset;
+        max-width: 60%;
+    }
+
+    .about h2{
+        width: 38%;
+        margin: 0;
+        font-size: 60px;
+        padding:100px 10px;
+    }
+
+    .about p{
+        margin-top: 2%;
+        font-size: 22px;
+        padding: 24px;
+    }
+
+    .projects img{
+        max-width: 255px;
+    }
+        
+    .description p{
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    main{
+        padding: 5% 10%;
+    }
+
+    .projects img{
+        max-width: 245px;
+    }
+
+    .about img{
+        max-width: 70%;
+    }
+
+    .about h2{
+        width: 28%;
+        font-size: 45px;
+    }
+
+    .about p{
+        padding: 28px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .about h2{
+        padding:115px 15px;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .about h2{
+        padding: 120px 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .about h2{
+        padding: 125px 20px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .about h2{
+        padding: 130px 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .about h2{
+    font-size: 50px;   
+    }
+}
+
+@media screen and (min-width: 919px) {
+    .projects img{
+        max-width: 230px;
+    }
+
+    .description p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .about h2{
+        padding: 170px 30px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .about img{
+        max-width: 50%;
+        margin: 0;
+    }
+
+    .about h2{
+        padding: unset;
+        padding: 100px;
+        min-width: 48%;
+        margin: 0;
+        font-size: 60px;
+    }
+
+    .name, .email{
+        height: 40px;
+    }
+
+    .name input, .email input, .mesaje textarea{
+        font-size: 20px;
+    }
+
+    .contact button{
+        height: 70px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .about h2{
+        padding: 150px 125px;
+    }
+}
+
+@media screen and (min-width: 1275px){
+    .about img{
+        max-width: 35%;
+        margin: 0;
+    }
+
+    .about h2{
+        padding: 100px 175px;
+        min-width: 63%;
+        font-size: 80px;
+    }
+
+    .projects img{
+        max-width: 300px;
+    }
+
+    .about p{
+        font-size: 26px;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .about h2{
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .projects img{
+        max-width: 380px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .about h2{
+        font-size: 150px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .about h2{
+        font-size: 200px;
+    }
+    .projects img{
+        max-width: 486px;
+    }
+}
+
+@media screen and (min-width: 2430px){
+    .projects img{
+        max-width: 628px;
+    }
+}
